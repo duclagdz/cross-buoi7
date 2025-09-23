@@ -1,123 +1,15 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #ffffff; /* Dark background as seen in the image */
+  background-color: #ffffff;
   color: #ffffff;
-}
-
-.main-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #222222; /* Header background color */
-  padding: 15px 30px;
-  border-bottom: 1px solid #333333;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-}
-
-.header-left .logo {
-  font-size: 30px;
-  font-weight: bold;
-  color: #ffffff;
-  text-decoration: none;
-  letter-spacing: 5px;
-}
-
-.header-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  margin-left: 700px;
-}
-
-.header-nav ul li {
-  margin-right: 25px;
-}
-
-.header-nav ul li a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 14px;
-  transition: color 0.3s ease;
-}
-
-.header-nav ul li a:hover {
-  color: #aaaaaa;
-}
-
-.header-right {
-  display: flex;
-  align-items: center;
-}
-
-.search-bar {
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
-  border-bottom: 1px solid #555555;
-  padding-bottom: 5px;
-}
-
-.search-bar i {
-  color: #aaaaaa;
-  margin-right: 8px;
-}
-
-.search-bar input {
-  background: none;
-  border: none;
-  color: #ffffff;
-  outline: none;
-  font-size: 14px;
-  width: 120px;
-}
-
-.search-bar input::placeholder {
-  color: #aaaaaa;
-}
-
-.user-icon,
-.cart-icon {
-  color: #ffffff;
-  text-decoration: none;
-  margin-left: 20px;
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-}
-
-.user-icon i,
-.cart-icon i {
-  margin-right: 5px;
-  font-size: 18px;
-}
-
-.cart-icon {
-  position: relative;
-}
-
-.cart-icon span {
-  position: absolute;
-  top: -8px;
-  right: -12px;
-  background-color: red; /* Example for cart count */
-  color: white;
-  border-radius: 50%;
-  padding: 2px 6px;
-  font-size: 10px;
 }
 
 /* Banner Section */
 .banner {
   position: relative;
   width: 100%;
-  height: 100vh; /* Full viewport height */
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -187,89 +79,9 @@ body {
   }
 }
 
-.social-icons {
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 15px 10px;
-  border-radius: 5px;
-}
-
-.social-icons a {
-  color: #ffffff;
-  font-size: 24px;
-  transition: color 0.3s ease;
-}
-
-.social-icons a:hover {
-  color: #aaaaaa;
-}
-
-/* About Us Section */
-.about-us-section {
-  display: flex;
-  height: 100vh;
-  background-color: #000;
-  color: #fff;
-}
-
-.about-us-image-container {
-  flex: 1;
-  overflow: hidden;
-}
-
-.about-us-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(50%); /* Darken the image */
-}
-
-.about-us-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 50px;
-  text-align: left;
-}
-
-.about-us-content h2 {
-  font-size: 3em;
-  margin-bottom: 20px;
-  letter-spacing: 5px;
-}
-
-.about-us-content p {
-  font-size: 1.1em;
-  line-height: 1.6;
-  margin-bottom: 30px;
-  max-width: 600px;
-}
-
-.social-icons-about-us {
-  display: flex;
-  gap: 20px;
-}
-
-.social-icons-about-us a {
-  color: #ffffff;
-  font-size: 24px;
-  transition: color 0.3s ease;
-}
-
-.social-icons-about-us a:hover {
-  color: #aaaaaa;
-}
-
 /* Sale Section */
 .sale-section {
-  background-color: #000000; /* Black background */
+  background-color: #000000;
   color: #ffffff;
   text-align: center;
   padding: 80px 20px;
@@ -296,7 +108,7 @@ body {
 
 .product-item {
   text-align: center;
-  width: 250px; /* Adjust as needed */
+  width: 250px;
 }
 
 .product-item img {
@@ -353,7 +165,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Full viewport height */
+  height: 100vh;
   background-color: #000;
 }
 
@@ -440,4 +252,140 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* About Section */
+.about-section {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee")
+    center/cover no-repeat;
+}
+
+/* Lớp tối bên trái */
+.about-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%; /* Nửa bên trái */
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+/* Nội dung chữ bên trái */
+.about-text {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2; /* Đè lên overlay */
+  padding: 50px;
+}
+
+.about-text-content {
+  max-width: 500px;
+  color: #fff;
+}
+
+.about-text-content h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.about-text-content p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Phần bên phải để giữ ảnh sáng */
+.about-right {
+  width: 50%;
+  position: relative;
+}
+
+/*Contact Section */
+.contact-section {
+  background-color: #0a0a0a; /* nền đen */
+  color: #fff;
+  padding: 80px 10%;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.contact-form {
+  flex: 1;
+  max-width: 600px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.send-btn {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 10px 40px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  float: right;
+}
+
+.send-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-info h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.contact-info p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }

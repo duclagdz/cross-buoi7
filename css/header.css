@@ -1,0 +1,112 @@
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222222;
+  padding: 15px 30px;
+  border-bottom: 1px solid #333333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header-left .logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 5px;
+}
+
+.header-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin-left: 500px; /* Giảm khoảng cách sang trái */
+}
+
+.header-nav ul li {
+  margin-right: 40px; /* Tăng khoảng cách giữa các mục menu */
+}
+
+.header-nav ul li:last-child {
+  margin-right: 0; /* Không margin cho mục cuối */
+}
+
+.header-nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 2px; /* Giãn cách chữ */
+  transition: color 0.3s ease;
+}
+
+.header-nav ul li a:hover {
+  color: #aaaaaa;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  border-bottom: 1px solid #555555;
+  padding-bottom: 5px;
+}
+
+.search-bar i {
+  color: #aaaaaa;
+  margin-right: 8px;
+}
+
+.search-bar input {
+  background: none;
+  border: none;
+  color: #ffffff;
+  outline: none;
+  font-size: 14px;
+  width: 120px;
+}
+
+.search-bar input::placeholder {
+  color: #aaaaaa;
+}
+
+.user-icon,
+.cart-icon {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.user-icon i,
+.cart-icon i {
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+.cart-icon {
+  position: relative;
+}
+
+.cart-icon span {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 10px;
+}

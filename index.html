@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Northpole</title>
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -36,18 +38,17 @@
     </header>
 
     <section class="banner">
-      <img src="banner.jpg" alt="Plan Your Adventure" class="banner-image" />
+      <img
+        src="./image/banner.jpg"
+        alt="Plan Your Adventure"
+        class="banner-image"
+      />
       <div class="banner-content">
         <h1>PLAN YOUR ADVENTURE</h1>
         <button class="shop-now-button">SHOP NOW</button>
         <div class="scroll-down-arrow">
           <i class="fas fa-chevron-down"></i>
         </div>
-      </div>
-      <div class="social-icons">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
       </div>
     </section>
 
@@ -94,55 +95,128 @@
     <div class="chat-icon">
       <i class="fas fa-comment-dots"></i>
     </div>
-
-    <section class="category-section">
-      <div class="category-item">
-        <img src="banner.jpg" alt="Backpacks" class="category-image" />
-        <div class="category-content">
-          <h2>BACKPACKS</h2>
-        </div>
-      </div>
-      <div class="category-item">
-        <img src="banner.jpg" alt="Duffle Bags" class="category-image" />
-        <div class="category-content">
-          <h2>DUFFLE BAGS</h2>
-        </div>
-      </div>
-      <div class="category-item">
-        <img src="banner.jpg" alt="Travel Packs" class="category-image" />
-        <div class="category-content">
-          <h2>TRAVEL PACKS</h2>
-        </div>
-      </div>
-    </section>
-
     <section class="new-arrivals-section">
       <div class="new-arrivals-content">
         <h2>NEW ARRIVALS</h2>
         <button class="shop-now-button">SHOP NOW</button>
       </div>
       <div class="new-arrivals-image-container">
-        <img src="banner.jpg" alt="New Arrivals" class="new-arrivals-image" />
+        <img
+          src="./image/banner.jpg"
+          alt="New Arrivals"
+          class="new-arrivals-image"
+        />
       </div>
     </section>
-    <section class="about-us-section">
-      <div class="about-us-image-container">
-        <img src="banner.jpg" alt="About Us" class="about-us-image" />
+    <section class="category-section">
+      <div class="category-item">
+        <img src="./image/banner.jpg" alt="Backpacks" class="category-image" />
+        <div class="category-content">
+          <h2>BACKPACKS</h2>
+        </div>
       </div>
-      <div class="about-us-content">
-        <h2>ABOUT US</h2>
-        <p>
-          I'm a paragraph. Click here to add your own text and edit me. It's
-          easy. Just click "Edit Text" or double click me to add your own
-          content and make changes to the font. I'm a great place for you to
-          tell a story and let your users know a little more about you.
-        </p>
-        <div class="social-icons-about-us">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
+      <div class="category-item">
+        <img
+          src="./image/banner.jpg"
+          alt="Duffle Bags"
+          class="category-image"
+        />
+        <div class="category-content">
+          <h2>DUFFLE BAGS</h2>
+        </div>
+      </div>
+      <div class="category-item">
+        <img
+          src="./image/banner.jpg"
+          alt="Travel Packs"
+          class="category-image"
+        />
+        <div class="category-content">
+          <h2>TRAVEL PACKS</h2>
         </div>
       </div>
     </section>
+
+    <section class="about-section">
+      <div class="about-text">
+        <div class="about-text-content">
+          <h1>ABOUT US</h1>
+          <p>
+            I'm a paragraph. Click here to add your own text and edit me. It’s
+            easy. Just click “Edit Text” or double click me to add your own
+            content and make changes to the font. I’m a great place for you to
+            tell a story and let your users know a little more about you.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="contact-container">
+        <!-- Form bên trái -->
+        <form class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name *</label>
+              <input type="text" id="firstName" name="firstName" required />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name *</label>
+              <input type="text" id="lastName" name="lastName" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message"></textarea>
+          </div>
+          <button type="submit" class="send-btn">Send</button>
+        </form>
+
+        <!-- Thông tin liên hệ bên phải -->
+        <div class="contact-info">
+          <h2>CONTACT</h2>
+          <p>
+            I'm a paragraph. Click here to add your own text and edit me. I’m a
+            great place for you to tell a story and let your users know a little
+            more about you.
+          </p>
+          <p>
+            info@my-domain.com <br />
+            Tel: 1-800-000-0000
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <!-- Mạng xã hội -->
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+
+      <!-- Menu -->
+      <ul class="footer-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Our Team</a></li>
+      </ul>
+
+      <!-- Copyright -->
+      <p class="copyright">Copyright ©2022; Designed by <span>FAHEEM</span></p>
+    </footer>
   </body>
 </html>
