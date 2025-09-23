@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products | HERA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav">
+        <a href="#">Home</a> > <a href="#">All Products</a>
+    </nav>
+    <div class="container">
+        <h1>All Products</h1>
+        <p class="description">This is your category description. It's a great place to tell customers what this category is about.</p>
+        <div class="content">
+            <aside class="sidebar">
+                <h3>Browse by</h3>
+                <p>8 products</p>
+                <ul id="category-list">
+                    <li data-category="all" class="active">All Products</li>
+                    <li data-category="cream">Cream</li>
+                    <li data-category="serum">Serum</li>
+                    <li data-category="toner">Toner</li>
+                    <li data-category="new-arrival">New Arrival</li>
+                </ul>
+            </aside>
+            <main class="main">
+                <div class="product-grid" id="product-grid">
+                    <!-- Cream Products -->
+                    <div class="product" data-category="cream">
+                        <img src="images/cream-1.jpg" alt="REJUVENATE AMPOULE CREAM">
+                        <p>REJUVENATE AMPOULE CREAM</p>
+                        <p>$90.00</p>
+                        <div class="rating">★★★★★ 4.8 (8)</div>
+                    </div>
+                    <div class="product" data-category="cream">
+                        <img src="images/cream-2.jpg" alt="SIGNIA VITAL LIFTING CREAM">
+                        <p>SIGNIA VITAL LIFTING CREAM</p>
+                        <p>$120.00</p>
+                        <div class="rating">★★★★★ 4.9 (20)</div>
+                    </div>
+                    <div class="product" data-category="cream">
+                        <img src="images/cream-3.jpg" alt="HYDRO-DEW PLUMPING CREAM">
+                        <p>HYDRO-DEW PLUMPING CREAM</p>
+                        <p>$80.00</p>
+                        <div class="rating">★★★★☆ 4.6 (14)</div>
+                    </div>
+
+                    <!-- Serum Products -->
+                    <div class="product" data-category="serum">
+                        <img src="images/serum-1.jpg" alt="SIGNIA RECOVERY CONCENTRATE">
+                        <p>SIGNIA RECOVERY CONCENTRATE</p>
+                        <p>$130.00</p>
+                        <div class="rating">★★★★★ 5.0 (5)</div>
+                    </div>
+                    <div class="product" data-category="serum">
+                        <img src="images/serum-2.jpg" alt="COMFY REVITALIZING SERUM MIST">
+                        <p>COMFY REVITALIZING SERUM MIST</p>
+                        <p>$85.00</p>
+                        <div class="rating">★★★★☆ 4.4 (13)</div>
+                    </div>
+                    <div class="product" data-category="serum">
+                        <span class="new">New</span>
+                        <img src="images/serum-3.jpg" alt="SIGNIA CORE LIFTING SERUM">
+                        <p>SIGNIA CORE LIFTING SERUM</p>
+                        <p>$110.00</p>
+                        <div class="rating">★★★★★ 4.9 (22)</div>
+                    </div>
+                    
+                    <!-- Toner Products -->
+                    <div class="product" data-category="toner new-arrival">
+                        <span class="new">New</span>
+                        <img src="images/toner-1.jpg" alt="SIGNIA SKIN REFINING WATER">
+                        <p>SIGNIA SKIN REFINING WATER</p>
+                        <p>$60.00</p>
+                        <div class="rating"s>★★★★☆ 4.5 (14)</div>
+                    </div>
+                    <div class="product" data-category="toner">
+                        <img src="images/toner-2.jpg" alt="POWER BOOSTING TONER">
+                        <p>POWER BOOSTING TONER</p>
+                        <p>$55.00</p>
+                        <div class="rating">★★★★☆ 4.3 (17)</div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryLinks = document.querySelectorAll('#category-list li');
+            const products = document.querySelectorAll('.product');
+
+            // Cập nhật data-category cho các sản phẩm New Arrival
+            products.forEach(product => {
+                if (product.querySelector('.new')) {
+                    let currentCategories = product.getAttribute('data-category') || '';
+                    if (!currentCategories.includes('new-arrival')) {
+                        product.setAttribute('data-category', currentCategories + ' new-arrival');
+                    }
+                }
+            });
+
+            categoryLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Xóa class active từ tất cả links
+                    categoryLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const selectedCategory = this.getAttribute('data-category');
+                    
+                    // Hiển thị/tắt sản phẩm dựa trên phân loại
+                    products.forEach(product => {
+                        const productCategories = product.getAttribute('data-category').split(' ');
+                        if (selectedCategory === 'all') {
+                            product.style.display = 'block';
+                        } else if (productCategories.includes(selectedCategory)) {
+                            product.style.display = 'block';
+                        } else {
+                            product.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
