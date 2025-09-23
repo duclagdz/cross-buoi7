@@ -1,0 +1,124 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #222;
+  background-color: #fff;
+  line-height: 1.6;
+}
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Product detail layout */
+.product-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-top: 40px;
+  align-items: start;
+}
+.product-images img {
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+.product-info h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.product-info .size {
+  color: #777;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.product-info .short-desc {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 15px;
+}
+.product-info .type-tags {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 30px;
+}
+.product-info button.buy {
+  background: #000;
+  color: #fff;
+  padding: 15px 40px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+.product-info button.buy:hover {
+  background: #444;
+}
+
+/* Tabs */
+.tabs {
+  margin-top: 80px;
+}
+.tabs-nav {
+  display: flex;
+  gap: 40px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+.tabs-nav button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  padding: 10px 0;
+  cursor: pointer;
+  color: #666;
+  position: relative;
+}
+.tabs-nav button.active {
+  color: #000;
+  font-weight: bold;
+}
+.tabs-nav button.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #000;
+}
+.tab-content { display: none; padding: 20px 0; }
+.tab-content.active { display: block; }
+
+.tab-content h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.tab-content p, .tab-content li {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #444;
+}
+ol { margin-left: 20px; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .product-detail {
+    grid-template-columns: 1fr;
+  }
+}
+/* Giá sản phẩm */
+.product-info .price {
+  font-size: 22px;
+  font-weight: bold;
+  color: #c00; /* đỏ nổi bật */
+  margin-bottom: 20px;
+}

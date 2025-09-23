@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Signia Vital Lifting Cream | HERA</title>
+  <link rel="stylesheet" href="./css/detail.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="product-detail">
+      <div class="product-images">
+        <img src="./images/cream-2.jpg" alt="Signia Vital Lifting Cream">
+      </div>
+      <div class="product-info">
+        <h1>Signia Vital Lifting Cream</h1>
+        <div class="size">60ml</div>
+        <!-- ✅ Giá sản phẩm -->
+        <div class="price">$250.00</div>
+        <div class="short-desc">
+          A velvety textured firming cream that provides deep nourishment to keep the skin soft and supple.
+        </div>
+        <div class="type-tags">Skin brightening • All skin types • Day/Night</div>
+        <button class="buy">ADD TO CART</button>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <div class="tabs-nav">
+        <button class="active" data-tab="tab1">DETAILS</button>
+        <button data-tab="tab2">HOW TO</button>
+        <button data-tab="tab3">MORE DETAILS</button>
+        <button data-tab="tab4">INGREDIENTS</button>
+      </div>
+      <div class="tab-content active" id="tab1">
+        <h3>Details</h3>
+        <p>Narcissus plant cells for smooth and supple beautiful skin.</p>
+        <p>
+          Revitalize your skin with the Narcissus Stem Code Active™... Deep nourishing argan oil spreads on gently to form a velvety textured coat of firmness and moisture over the skin.
+        </p>
+      </div>
+      <div class="tab-content" id="tab2">
+        <h3>How To</h3>
+        <ol>
+          <li>Put both thumbs under the jawbone and pull the face toward the ears.</li>
+          <li>Smile to yourself and press the corners of your mouth with your thumbs for five seconds.</li>
+          <li>Massage cheekbones upward with thumbs.</li>
+          <li>Massage eyebrows and forehead to smooth wrinkles.</li>
+        </ol>
+      </div>
+      <div class="tab-content" id="tab3">
+        <h3>More Details</h3>
+        <p>Shelf Life: Use within 12 months of opening.</p>
+        <p>Cautions: Keep the product at 10–30ºC away from direct sunlight.</p>
+      </div>
+      <div class="tab-content" id="tab4">
+        <h3>Ingredients</h3>
+        <p>
+          WATER / AQUA / EAU, BUTYLENE GLYCOL, GLYCERIN, BEHENYL ALCOHOL, CETYL ETHYLHEXANOATE, ...
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Tab switching
+    document.querySelectorAll('.tabs-nav button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tabs-nav button').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
