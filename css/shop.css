@@ -132,6 +132,14 @@ body {
   margin-bottom: 15px;
 }
 
+.breadcrumb a {
+  color: #aaa;
+  text-decoration: none;
+}
+.breadcrumb a:hover {
+  color: #ffcc00; /* màu khi hover */
+}
+
 /* Products header + sort */
 .products-header {
   display: flex;

@@ -1,0 +1,436 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEOUL BEAUTY | HERA International</title>
+    <link rel="stylesheet" href="./css/detail.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/dropdown.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="header-left">
+        <a href="index.html" class="logo">HERA</a>
+      </div>
+      <nav class="header-nav">
+        <ul>
+          <li class="dropdown">
+            <a href="shop.html">SHOP</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">All Products</a></li>
+              <li><a href="#">New Arrivals</a></li>
+              <li><a href="#">Sale</a></li>
+            </ul>
+          </li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">BEST SELLER</a></li>
+          <li><a href="#">CONTACT</a></li>
+        </ul>
+      </nav>
+      <div class="header-right">
+        <div class="search-bar">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="SEARCH ..." />
+        </div>
+        <a href="login.html" class="user-icon"
+          ><i class="fas fa-user"></i> Log In</a
+        >
+        <a href="#" class="cart-icon"
+          ><i class="fas fa-shopping-basket"></i> 0</a
+        >
+      </div>
+    </header>
+    <div class="chat-icon">
+      <i class="fas fa-comment-dots"></i>
+    </div>
+    <main class="product-detail-page">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> / <a href="shop.html">All Products</a> /
+        I'M A PRODUCT
+      </div>
+
+      <section class="product-main">
+        <div class="product-image">
+          <img src="./images/serum-1.jpg" alt="Product Image" />
+        </div>
+        <div class="product-details">
+          <div class="product-navigation">
+            <a href="#">< Prev</a> | <a href="#">Next ></a>
+          </div>
+          <h1>I'M A PRODUCT</h1>
+          <div class="rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i
+            ><i class="fas fa-star"></i><i class="fas fa-star"></i
+            ><i class="fas fa-star-half-alt"></i> 4.2/5 (11 reviews)
+          </div>
+          <p class="sku">SKU: 0004</p>
+          <p class="price">$75.00</p>
+          <p class="description">
+            I'm a product description. This is a great place to "sell" your
+            product and grab buyers' attention. Describe your product
+            <a href="#">Read more</a>
+          </p>
+
+          <div class="options">
+            <div class="color-option">
+              <label for="color">Color: Black*</label>
+              <select id="color">
+                <option value="black">Black</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+              </select>
+            </div>
+            <div class="quantity-option">
+              <label for="quantity">Quantity*</label>
+              <div class="quantity-selector">
+                <button>-</button>
+                <input type="number" id="quantity" value="1" min="1" />
+                <button>+</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="wishlist"><i class="far fa-heart"></i></button>
+            <button class="buy-now">Buy Now</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="product-info-policy">
+        <div class="product-info">
+          <h2>PRODUCT INFO</h2>
+          <p>
+            I'm a product detail. I'm a great place to add more information
+            about your product such as sizing, material, care and cleaning
+            instructions. This is also a great space to write what makes this
+            product great and how your customers can benefit from them. Buyers
+            like to know what they're getting before they purchase, so don't be
+            shy!
+          </p>
+          <p>
+            Information on this page is for reference only. Please contact us
+            directly for more details.
+          </p>
+        </div>
+        <div class="return-refund-policy">
+          <h2>RETURN AND REFUND POLICY</h2>
+          <p>
+            I'm a Return and Refund policy. I'm a great place to let your
+            customers know what to do in case they are dissatisfied with their
+            purchase. Having a straightforward refund or exchange policy is a
+            great way to build trust and reassure your customers that they can
+            buy with confidence.
+          </p>
+        </div>
+      </section>
+
+      <section class="reviews-section">
+        <h2>Reviews</h2>
+        <div class="overall-rating">
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i
+            ><i class="fas fa-star"></i><i class="fas fa-star"></i
+            ><i class="fas fa-star-half-alt"></i> 4.2
+          </div>
+          <p>Based on 11 reviews</p>
+          <button class="leave-review">Leave a Review</button>
+        </div>
+
+        <div class="review-form-container" style="display: none">
+          <div class="review-form">
+            <h3>Leave a Review</h3>
+            <div class="form-group">
+              <label for="reviewer-name">Name* (this appears publicly)</label>
+              <input type="text" id="reviewer-name" value="reviewuser" />
+              <span class="clear-input">x</span>
+            </div>
+            <div class="form-group">
+              <label>Add a rating*</label>
+              <div class="star-rating">
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="review-title">Review title*</label>
+              <input type="text" id="review-title" />
+            </div>
+            <div class="form-group">
+              <label for="review-content">Review*</label>
+              <textarea id="review-content" rows="5"></textarea>
+              <span class="char-count">0/5000</span>
+            </div>
+            <div class="form-group">
+              <label>Add images & videos (0/5)</label>
+              <div class="image-upload">
+                <div class="upload-box">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button class="cancel-review">Cancel</button>
+              <button class="publish-review">Publish</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="rating-breakdown">
+          <div class="rating-bar">
+            <span>5 stars</span>
+            <div class="bar"><div style="width: 80%"></div></div>
+            <span>8</span>
+          </div>
+          <div class="rating-bar">
+            <span>4 stars</span>
+            <div class="bar"><div style="width: 10%"></div></div>
+            <span>1</span>
+          </div>
+          <div class="rating-bar">
+            <span>3 stars</span>
+            <div class="bar"><div style="width: 0%"></div></div>
+            <span>0</span>
+          </div>
+          <div class="rating-bar">
+            <span>2 stars</span>
+            <div class="bar"><div style="width: 10%"></div></div>
+            <span>1</span>
+          </div>
+          <div class="rating-bar">
+            <span>1 star</span>
+            <div class="bar"><div style="width: 0%"></div></div>
+            <span>0</span>
+          </div>
+        </div>
+
+        <div class="review-list">
+          <div class="review-header">
+            <p>11 reviews</p>
+            <div class="filter-sort">
+              <span>Filter by rating</span>
+              <select>
+                <option>All Stars</option>
+              </select>
+              <span>Sort by</span>
+              <select>
+                <option>Most Relevant</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="review-item">
+            <div class="review-meta">
+              <span class="reviewer-name">Ava Howard</span> -
+              <span class="review-date">Apr 22, 2022</span>
+              <span class="verified">Verified</span>
+            </div>
+            <div class="review-rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
+            </div>
+            <p class="review-title">Highly recommend</p>
+            <p class="review-content">
+              The online shopping experience was very easy and smooth. I was a
+              bit hesitant if this is right for me. Through there is a lot of
+              relevant information on their site. Still wanted to double-check
+              some product specs, like the material and dimensions. Their agents
+              were so professional, attentive and provided very accurate
+              information. Overall, I'm quite satisfied with their quality.
+            </p>
+            <div class="review-actions">
+              <span>Was this helpful?</span>
+              <button><i class="far fa-thumbs-up"></i> Yes (1)</button>
+              <button><i class="far fa-thumbs-down"></i> No</button>
+            </div>
+          </div>
+
+          <div class="review-item">
+            <div class="review-meta">
+              <span class="reviewer-name">Stona Dewar</span> -
+              <span class="review-date">Apr 22, 2022</span>
+            </div>
+            <div class="review-rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
+            </div>
+            <p class="review-content">Thank you so much!</p>
+            <div class="review-actions">
+              <span>Was this helpful?</span>
+              <button><i class="far fa-thumbs-up"></i> Yes</button>
+              <button><i class="far fa-thumbs-down"></i> No</button>
+            </div>
+          </div>
+
+          <div class="review-item">
+            <div class="review-meta">
+              <span class="reviewer-name">Ingrid Brown</span> -
+              <span class="review-date">Apr 22, 2022</span>
+            </div>
+            <div class="review-rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
+            </div>
+            <p class="review-title">Too pricey</p>
+            <p class="review-content">
+              Was not impressed with the quality at this price range. The
+              delivery came on time, but the packaging was cheap and everything
+              inside was broken. Definitely not worth the price tag!
+            </p>
+            <div class="review-actions">
+              <span>Was this helpful?</span>
+              <button><i class="far fa-thumbs-up"></i> Yes</button>
+              <button><i class="far fa-thumbs-down"></i> No</button>
+            </div>
+          </div>
+
+          <div class="review-item">
+            <div class="review-meta">
+              <span class="reviewer-name">Sally Palmer</span> -
+              <span class="review-date">Apr 22, 2022</span>
+              <span class="verified">Verified</span>
+            </div>
+            <div class="review-rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
+            </div>
+            <p class="review-title">Support your local business!</p>
+            <p class="review-content">
+              This product is awesome - good quality and the materials are
+              local. Wish there were more sites like this one that sold
+              handcrafted products. Will definitely buy it again!
+            </p>
+            <div class="review-actions">
+              <span>Was this helpful?</span>
+              <button><i class="far fa-thumbs-up"></i> Yes</button>
+              <button><i class="far fa-thumbs-down"></i> No</button>
+            </div>
+          </div>
+          <div
+            class="product-navigation"
+            style="text-align: center; margin-top: 20px"
+          >
+            <a href="#">< Prev</a> | <a href="#">Next ></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="you-might-also-like">
+        <h2>You Might Also Like</h2>
+        <div class="product-carousel">
+          <div class="carousel-arrow left-arrow"><</div>
+          <div class="carousel-items">
+            <div class="product-card">
+              <img src="./images/cream-1.jpg" alt="Product" />
+              <p class="product-name">I'M A PRODUCT</p>
+              <p class="product-price">$75.00</p>
+            </div>
+            <div class="product-card">
+              <img src="./images/cream-2.jpg" alt="Product" />
+              <p class="product-name">CANVAS BACKPACK</p>
+              <p class="product-price">$69.00 <del>$75.00</del></p>
+            </div>
+            <div class="product-card">
+              <img src="./images/cream-3.jpg" alt="Product" />
+              <p class="product-name">I'M A PRODUCT</p>
+              <p class="product-price">$75.00</p>
+            </div>
+            <div class="product-card">
+              <img src="./images/serum-2.jpg" alt="Product" />
+              <p class="product-name">I'M A PRODUCT</p>
+              <p class="product-price">$75.00</p>
+            </div>
+            <div class="product-card">
+              <img src="./images/serum-3.jpg" alt="Product" />
+              <p class="product-name">CAMO BACKPACK</p>
+              <p class="product-price">$69.00 <del>$75.00</del></p>
+            </div>
+          </div>
+          <div class="carousel-arrow right-arrow">></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <!-- Mạng xã hội -->
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+
+      <!-- Menu -->
+      <ul class="footer-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Our Team</a></li>
+      </ul>
+
+      <!-- Copyright -->
+      <p class="copyright">Copyright ©2022; Designed by <span>FAHEEM</span></p>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const leaveReviewButton = document.querySelector(".leave-review");
+        const reviewFormContainer = document.querySelector(
+          ".review-form-container"
+        );
+        const cancelReviewButton = document.querySelector(".cancel-review");
+        const reviewerNameInput = document.getElementById("reviewer-name");
+        const clearInputSpan = document.querySelector(".clear-input");
+        const reviewContentTextarea = document.getElementById("review-content");
+        const charCountSpan = document.querySelector(".char-count");
+        const starRatingDiv = document.querySelector(".star-rating");
+        const stars = starRatingDiv.querySelectorAll("i");
+
+        leaveReviewButton.addEventListener("click", () => {
+          reviewFormContainer.style.display = "block";
+        });
+
+        cancelReviewButton.addEventListener("click", () => {
+          reviewFormContainer.style.display = "none";
+        });
+
+        clearInputSpan.addEventListener("click", () => {
+          reviewerNameInput.value = "";
+        });
+
+        reviewContentTextarea.addEventListener("input", () => {
+          const currentLength = reviewContentTextarea.value.length;
+          charCountSpan.textContent = `${currentLength}/5000`;
+        });
+
+        stars.forEach((star, index) => {
+          star.addEventListener("click", () => {
+            stars.forEach((s, i) => {
+              if (i <= index) {
+                s.classList.remove("far");
+                s.classList.add("fas");
+              } else {
+                s.classList.remove("fas");
+                s.classList.add("far");
+              }
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
