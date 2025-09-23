@@ -1,0 +1,177 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/shop.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/dropdown.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="header-left">
+        <a href="./index.html" class="logo">HERA</a>
+      </div>
+      <nav class="header-nav">
+        <ul>
+          <li class="dropdown">
+            <a href="#">SHOP</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">All Products</a></li>
+              <li><a href="#">New Arrivals</a></li>
+              <li><a href="#">Sale</a></li>
+            </ul>
+          </li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">BEST SELLER</a></li>
+          <li><a href="#">CONTACT</a></li>
+        </ul>
+      </nav>
+      <div class="header-right">
+        <div class="search-bar">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="SEARCH ..." />
+        </div>
+        <a href="#" class="user-icon"><i class="fas fa-user"></i> Log In</a>
+        <a href="#" class="cart-icon"
+          ><i class="fas fa-shopping-basket"></i> 0</a
+        >
+      </div>
+    </header>
+    <div class="chat-icon">
+      <i class="fas fa-comment-dots"></i>
+    </div>
+
+    <section class="products-page">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <h3>Browse by</h3>
+        <ul>
+          <li><a href="#">All Products</a></li>
+          <li><a href="#">Backpacks</a></li>
+          <li><a href="#">Duffle bags</a></li>
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#">Travel Packs</a></li>
+        </ul>
+
+        <h3>Filter by</h3>
+        <div class="filter-group">
+          <label for="price">Price</label>
+          <input
+            type="range"
+            id="price"
+            min="65"
+            max="130"
+            step="5"
+            value="100"
+          />
+          <div class="range-labels">
+            <span>$65</span>
+            <span>$130</span>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <label for="color">Color</label>
+          <select id="color">
+            <option value="">All</option>
+            <option value="black">Black</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+          </select>
+        </div>
+      </aside>
+
+      <!-- Product List -->
+      <div class="products">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">Home > All Products</div>
+
+        <!-- Tiêu đề + sort -->
+        <div class="products-header">
+          <div>
+            <h2>All Products</h2>
+            <p class="description">
+              This is your category description. It’s a great place to tell
+              customers what this...
+              <a href="#">Read more</a>
+            </p>
+          </div>
+          <div class="sort-box">
+            <label>Sort by:</label>
+            <select>
+              <option>Recommended</option>
+              <option>Price: Low to High</option>
+              <option>Price: High to Low</option>
+              <option>Newest</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- số lượng -->
+        <p class="product-count">18 products</p>
+
+        <!-- Danh sách sản phẩm -->
+        <div class="product-grid">
+          <div class="product-card">
+            <img src="bag1.png" alt="Canvas Backpack" />
+            <h4>CANVAS BACKPACK</h4>
+            <p class="price"><span class="old-price">$75.00</span> $67.50</p>
+            <p class="rating">⭐ 4.5 (4)</p>
+          </div>
+
+          <div class="product-card">
+            <img src="bag2.png" alt="Backpack" />
+            <h4>I’M A PRODUCT</h4>
+            <p class="price">$75.00</p>
+            <p class="rating">⭐ 4.1 (15)</p>
+          </div>
+
+          <div class="product-card new">
+            <span class="new-label">New</span>
+            <img src="bag3.png" alt="Backpack" />
+            <h4>I’M A PRODUCT</h4>
+            <p class="price">$75.00</p>
+            <p class="rating">⭐ 4.2 (11)</p>
+          </div>
+
+          <div class="product-card new">
+            <span class="new-label">New</span>
+            <img src="bag4.png" alt="Backpack" />
+            <h4>I’M A PRODUCT</h4>
+            <p class="price">$95.00</p>
+            <p class="rating">⭐ 4.8 (6)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <!-- Mạng xã hội -->
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+
+      <!-- Menu -->
+      <ul class="footer-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Our Team</a></li>
+      </ul>
+
+      <!-- Copyright -->
+      <p class="copyright">Copyright ©2022; Designed by <span>FAHEEM</span></p>
+    </footer>
+  </body>
+</html>

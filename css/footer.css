@@ -6,21 +6,24 @@
 }
 
 .social-icons {
+  display: flex; /* xếp icon ngang */
+  justify-content: center; /* căn giữa toàn bộ */
+  gap: 15px; /* khoảng cách giữa các icon */
   margin-bottom: 20px;
 }
 
 .social-icons a {
-  display: inline-block;
+  display: flex; /* căn giữa icon trong vòng tròn */
+  justify-content: center;
+  align-items: center;
   width: 45px;
   height: 45px;
-  line-height: 45px;
-  margin: 0 8px;
   border-radius: 50%;
   background: #fff;
   color: #000;
   font-size: 20px;
-  text-align: center;
   transition: 0.3s;
+  text-decoration: none;
 }
 
 .social-icons a:hover {
