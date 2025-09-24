@@ -9,18 +9,19 @@
         margin: 0;
         padding: 0;
         font-family: Arial, sans-serif;
-        background-color: #21667a; /* Nền xanh đậm */
+        background-color: #000000; /* Dark background */
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100vh;
+        color: #ffffff; /* White text for body */
       }
 
       .login-box {
-        background: #fff;
+        background: #1a1a1a; /* Slightly lighter dark for the box */
         padding: 30px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         width: 300px;
         position: relative;
       }
@@ -29,7 +30,7 @@
         display: inline-block;
         margin-bottom: 10px;
         font-size: 14px;
-        color: #00a9c9;
+        color: #ffffff; /* White link */
         text-decoration: none;
         cursor: pointer;
       }
@@ -40,7 +41,7 @@
       .login-box h2 {
         margin: 0 0 20px 0;
         font-size: 22px;
-        color: #333;
+        color: #ffffff; /* White heading */
       }
 
       .login-box input[type="text"],
@@ -48,7 +49,9 @@
         width: 100%;
         padding: 10px;
         margin: 10px 0;
-        border: 1px solid #ccc;
+        border: 1px solid #555; /* Darker border */
+        background-color: #333; /* Dark input background */
+        color: #ffffff; /* White input text */
         border-radius: 4px;
         outline: none;
       }
@@ -58,7 +61,6 @@
         padding: 10px;
         margin-top: 10px;
         border: none;
-        color: white;
         font-size: 16px;
         font-weight: bold;
         border-radius: 4px;
@@ -66,27 +68,52 @@
       }
 
       .login-btn {
-        background-color: #00a9c9;
+        background-color: #ffffff; /* White button */
+        color: #000000; /* Black text for button */
       }
       .login-btn:hover {
-        background-color: #008ca7;
+        background-color: #cccccc; /* Lighter white on hover */
       }
 
       .login-box .signup-link {
         margin-top: 15px;
         display: block;
         font-size: 14px;
-        color: #555;
+        color: #aaaaaa; /* Light grey text */
         text-align: center;
       }
 
       .login-box .signup-link a {
-        color: #00a9c9;
+        color: #ffffff; /* White link */
         text-decoration: none;
       }
 
       .login-box .signup-link a:hover {
         text-decoration: underline;
+      }
+
+      /* Responsive Design for Login Page */
+      @media (max-width: 480px) {
+        .login-box {
+          width: 90%;
+          padding: 20px;
+        }
+
+        .login-box h2 {
+          font-size: 20px;
+        }
+
+        .login-box input[type="text"],
+        .login-box input[type="password"],
+        .login-box button {
+          padding: 8px;
+          font-size: 14px;
+        }
+
+        .back-link,
+        .login-box .signup-link {
+          font-size: 13px;
+        }
       }
     </style>
   </head>

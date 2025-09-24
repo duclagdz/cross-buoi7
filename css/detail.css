@@ -493,6 +493,11 @@ body {
   position: relative;
 }
 
+.product-card:hover {
+  box-shadow: 0 4px 12px rgba(255, 204, 0, 0.3);
+  transform: scale(1.005);
+}
+
 .product-card img {
   max-width: 100%;
   height: 200px; /* Fixed height for consistency */
@@ -790,4 +795,130 @@ body {
 
 .review-form .publish-review:hover {
   background-color: #eee;
+}
+
+/* Responsive Design for Detail Page */
+@media (max-width: 768px) {
+  .product-detail-page {
+    padding: 20px;
+  }
+
+  .product-main {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .product-image img {
+    height: auto;
+    max-height: 400px; /* Limit image height on smaller screens */
+  }
+
+  .product-details {
+    text-align: center;
+  }
+
+  .product-navigation {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .product-details h1 {
+    font-size: 2em;
+  }
+
+  .options {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .color-option select,
+  .quantity-selector {
+    width: 80%;
+    max-width: 250px;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .actions button {
+    width: 80%;
+    max-width: 250px;
+  }
+
+  .product-info-policy {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .overall-rating {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .review-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .filter-sort {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .carousel-arrow {
+    display: none; /* Hide arrows on small screens, rely on scroll */
+  }
+
+  .product-carousel {
+    justify-content: center;
+  }
+
+  .social-media-fixed {
+    display: none; /* Hide fixed social media on small screens */
+  }
+
+  .review-form {
+    padding: 20px;
+  }
+
+  .review-form h3 {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-detail-page {
+    padding: 10px;
+  }
+
+  .product-details h1 {
+    font-size: 1.8em;
+  }
+
+  .product-details .price {
+    font-size: 1.5em;
+  }
+
+  .product-info h2,
+  .return-refund-policy h2,
+  .reviews-section h2,
+  .you-might-also-like h2 {
+    font-size: 1.5em;
+  }
+
+  .review-form input[type="text"],
+  .review-form textarea {
+    width: calc(100% - 10px); /* Adjust for smaller padding */
+  }
+
+  .review-form .clear-input {
+    right: 5px;
+  }
 }
