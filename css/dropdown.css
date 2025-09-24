@@ -28,6 +28,11 @@
   white-space: nowrap; /* không bị xuống dòng */
 }
 
+.header-nav ul li .dropdown-menu li {
+  width: 100%; /* bắt li full width của menu */
+  display: block;
+}
+
 .header-nav ul li .dropdown-menu li a:hover {
   background-color: #333;
   color: #aaa;
