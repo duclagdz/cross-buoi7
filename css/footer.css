@@ -1,0 +1,64 @@
+.footer {
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+.social-icons {
+  display: flex; /* xếp icon ngang */
+  justify-content: center; /* căn giữa toàn bộ */
+  gap: 15px; /* khoảng cách giữa các icon */
+  margin-bottom: 20px;
+}
+
+.social-icons a {
+  display: flex; /* căn giữa icon trong vòng tròn */
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #fff;
+  color: #000;
+  font-size: 20px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  background: #ff9800;
+  color: #fff;
+}
+
+.footer-menu {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.footer-menu li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.footer-menu li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-menu li a:hover {
+  color: #fff;
+}
+
+.copyright {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.copyright span {
+  color: #ff9800;
+  font-weight: bold;
+}

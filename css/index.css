@@ -1,0 +1,579 @@
+body {
+  margin: 0;
+  background-color: #ffffff;
+  color: #ffffff;
+}
+
+/* Banner Section */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.banner-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.banner-content {
+  text-align: center;
+  z-index: 1;
+  color: #3a3b3b;
+}
+
+.banner-content h1 {
+  font-size: 60px;
+  margin-bottom: 30px;
+  letter-spacing: 5px;
+}
+
+.shop-now-button {
+  background-color: transparent;
+  color: #000000;
+  border: 2px solid #3a3b3b;
+  padding: 15px 40px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 15px;
+}
+
+.shop-now-button:hover {
+  background-color: #4d4d4d;
+  color: #000000;
+}
+
+.scroll-down-arrow {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30px;
+  color: #ffffff;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Sale Section */
+.sale-section {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.sale-section h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  letter-spacing: 3px;
+}
+
+.sale-section h3 {
+  font-size: 20px;
+  margin-bottom: 50px;
+  color: #aaaaaa;
+}
+
+.products-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.product-item {
+  text-align: center;
+  width: 250px;
+}
+
+.product-item:hover {
+  transform: scale(1.05);
+}
+
+.product-item img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.product-item h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.product-item .price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.product-item .original-price {
+  text-decoration: line-through;
+  color: #aaaaaa;
+  font-size: 16px;
+}
+
+.product-item .sale-price {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.chat-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+/* Category Section */
+.category-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000;
+}
+
+.category-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.category-item-link {
+  display: block;
+  width: 33.33%;
+  height: 100%;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+
+.category-item .category-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.category-item:hover .category-image {
+  transform: scale(1.05);
+}
+
+.category-item .category-content {
+  position: absolute;
+  color: #3a3b3b;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  z-index: 1;
+}
+
+.category-item .category-content h2 {
+  font-size: 2em;
+  letter-spacing: 3px;
+}
+
+/* New Arrivals Section */
+.new-arrivals-section {
+  display: flex;
+  height: 100vh;
+  background-color: #000;
+  color: #fff;
+}
+
+.new-arrivals-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.new-arrivals-content h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  letter-spacing: 5px;
+}
+
+.new-arrivals-content .shop-now-button {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  padding: 15px 40px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.new-arrivals-content .shop-now-button:hover {
+  background-color: #ffffff;
+  color: #000;
+}
+
+.new-arrivals-image-container {
+  flex: 1;
+  overflow: hidden;
+}
+
+.new-arrivals-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* About Section */
+.about-section {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background: url("../images/about.jpg") center/cover no-repeat;
+}
+
+/* Lớp tối bên trái */
+.about-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%; /* Nửa bên trái */
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+/* Nội dung chữ bên trái */
+.about-text {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2; /* Đè lên overlay */
+  padding: 50px;
+}
+
+.about-text-content {
+  max-width: 500px;
+  color: #fff;
+}
+
+.about-text-content h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.about-text-content p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Phần bên phải để giữ ảnh sáng */
+.about-right {
+  width: 50%;
+  position: relative;
+}
+
+/*Contact Section */
+.contact-section {
+  background-color: #0a0a0a; /* nền đen */
+  color: #fff;
+  padding: 80px 10%;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.contact-form {
+  flex: 1;
+  max-width: 600px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.send-btn {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 10px 40px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  float: right;
+}
+
+.send-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-info h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.contact-info p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Header */
+  .main-header {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px;
+  }
+
+  .header-nav ul {
+    flex-direction: column;
+    margin-top: 15px;
+  }
+
+  .header-nav li {
+    margin: 10px 0;
+  }
+
+  .header-right {
+    margin-top: 15px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-bar {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .user-icon,
+  .cart-icon {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Banner Section */
+  .banner-content h1 {
+    font-size: 40px;
+  }
+
+  .shop-now-button {
+    padding: 10px 30px;
+    font-size: 16px;
+  }
+
+  /* Sale Section */
+  .sale-section {
+    padding: 50px 10px;
+  }
+
+  .sale-section h2 {
+    font-size: 30px;
+  }
+
+  .sale-section h3 {
+    font-size: 16px;
+  }
+
+  .products-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .product-item {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  /* New Arrivals Section */
+  .new-arrivals-section {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .new-arrivals-content {
+    padding: 40px 20px;
+  }
+
+  .new-arrivals-content h2 {
+    font-size: 2.5em;
+  }
+
+  .new-arrivals-image-container {
+    height: 300px;
+  }
+
+  /* Category Section */
+  .category-section {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .category-item {
+    width: 100%;
+    height: 300px;
+  }
+
+  /* About Section */
+  .about-section {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .about-section::before {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .about-text {
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+  }
+
+  .about-text-content h1 {
+    font-size: 30px;
+  }
+
+  .about-right {
+    display: none; /* Hide the right part on small screens */
+  }
+
+  /* Contact Section */
+  .contact-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .contact-form,
+  .contact-info {
+    max-width: 100%;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .send-btn {
+    width: 100%;
+    float: none;
+  }
+
+  /* Footer */
+  .footer-menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-content h1 {
+    font-size: 30px;
+  }
+
+  .sale-section h2 {
+    font-size: 24px;
+  }
+
+  .sale-section h3 {
+    font-size: 14px;
+  }
+
+  .new-arrivals-content h2 {
+    font-size: 2em;
+  }
+
+  .about-text-content h1 {
+    font-size: 24px;
+  }
+
+  .contact-info h2 {
+    font-size: 24px;
+  }
+}
