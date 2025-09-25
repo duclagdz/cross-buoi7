@@ -7,9 +7,9 @@
 .header-nav ul li .dropdown-menu {
   display: none;
   position: absolute;
-  top: 100%; /* ngay dưới chữ SHOP */
-  left: -530px; /* canh trái theo chữ SHOP */
-  background-color: #222;
+  top: 100%;
+  left: -530px;
+  background-color: rgba(34, 34, 34, 0.8);
   min-width: 180px;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
   border: 1px solid #333;
@@ -41,4 +41,20 @@
 /* Hiện menu khi hover */
 .header-nav ul li.dropdown:hover .dropdown-menu {
   display: block;
+}
+
+@media (max-width: 768px) {
+  .header-nav ul li .dropdown-menu {
+    position: static;
+    width: 100%;
+    left: 0;
+    box-shadow: none;
+    border: none;
+    background-color: #333;
+  }
+
+  .header-nav ul li .dropdown-menu li a {
+    padding: 8px 20px;
+    font-size: 13px;
+  }
 }

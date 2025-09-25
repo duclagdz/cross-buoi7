@@ -15,32 +15,56 @@ body {
   overflow: hidden;
 }
 
-.banner-image {
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slider-images {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slider-image {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slider-image.active {
+  opacity: 1;
 }
 
 .banner-content {
+  position: absolute; /* Position absolutely within the banner */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for element's own size */
   text-align: center;
-  z-index: 1;
-  color: #3a3b3b;
+  z-index: 2; /* Ensure it's above the slider images */
+  color: #ffffff;
+  width: 100%; /* Ensure it takes full width for text alignment */
 }
 
 .banner-content h1 {
   font-size: 60px;
   margin-bottom: 30px;
   letter-spacing: 5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Added text shadow */
 }
 
 .shop-now-button {
-  background-color: transparent;
-  color: #000000;
-  border: 2px solid #3a3b3b;
+  background-color: #ffffff; /* Changed to white for better visibility */
+  color: #000000; /* Changed to black text */
+  border: 2px solid #ffffff; /* Changed to white border */
   padding: 15px 40px;
   font-size: 18px;
   cursor: pointer;
@@ -49,18 +73,49 @@ body {
 }
 
 .shop-now-button:hover {
-  background-color: #4d4d4d;
-  color: #000000;
+  background-color: #000000; /* Changed to black background on hover */
+  color: #ffffff; /* Changed to white text on hover */
 }
 
 .scroll-down-arrow {
   position: absolute;
-  bottom: 30px;
-  left: 50%;
+  bottom: 80px; /* Adjusted to move it further down */
+  left: 48.5%;
   transform: translateX(-50%);
   font-size: 30px;
   color: #ffffff;
+  background-color: rgba(0, 0, 0, 0); /* Semi-transparent background */
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
   animation: bounce 2s infinite;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-down-arrow a {
+  color: white;
+}
+
+.scroll-down-arrow:hover {
+  background-color: rgba(245, 245, 245, 0.8);
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #ffffff;
 }
 
 @keyframes bounce {
@@ -402,40 +457,45 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .banner-content h1 {
+    font-size: 50px;
+  }
+
+  .sale-section h2 {
+    font-size: 35px;
+  }
+
+  .sale-section h3 {
+    font-size: 18px;
+  }
+
+  .products-grid {
+    gap: 30px;
+  }
+
+  .product-item {
+    width: 220px;
+  }
+
+  .new-arrivals-content h2 {
+    font-size: 2.8em;
+  }
+
+  .category-item .category-content h2 {
+    font-size: 1.8em;
+  }
+
+  .about-text-content h1 {
+    font-size: 35px;
+  }
+
+  .contact-info h2 {
+    font-size: 28px;
+  }
+}
+
 @media (max-width: 768px) {
-  /* Header */
-  .main-header {
-    flex-direction: column;
-    align-items: center;
-    padding: 15px 20px;
-  }
-
-  .header-nav ul {
-    flex-direction: column;
-    margin-top: 15px;
-  }
-
-  .header-nav li {
-    margin: 10px 0;
-  }
-
-  .header-right {
-    margin-top: 15px;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .search-bar {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .user-icon,
-  .cart-icon {
-    width: 100%;
-    text-align: center;
-  }
-
   /* Banner Section */
   .banner-content h1 {
     font-size: 40px;
@@ -493,8 +553,11 @@ body {
     height: auto;
   }
 
-  .category-item {
+  .category-item-link {
     width: 100%;
+  }
+
+  .category-item {
     height: 300px;
   }
 
@@ -543,12 +606,6 @@ body {
   .send-btn {
     width: 100%;
     float: none;
-  }
-
-  /* Footer */
-  .footer-menu {
-    flex-direction: column;
-    gap: 10px;
   }
 }
 

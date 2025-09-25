@@ -2,9 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #222222;
+  background: rgba(34, 34, 34, 0.5); /* trong suốt hoàn toàn */
   padding: 15px 30px;
-  border-bottom: 1px solid #333333;
+
   position: fixed;
   top: 0;
   left: 0;
@@ -25,11 +25,11 @@
   margin: 0;
   padding: 0;
   display: flex;
-  margin-left: 500px; /* Giảm khoảng cách sang trái */
+  margin-left: 500px;
 }
 
 .header-nav ul li {
-  margin-right: 40px; /* Tăng khoảng cách giữa các mục menu */
+  margin-right: 40px;
 }
 
 .header-nav ul li:last-child {
@@ -109,4 +109,92 @@
   border-radius: 50%;
   padding: 2px 6px;
   font-size: 10px;
+}
+
+@media (max-width: 1024px) {
+  .main-header {
+    padding: 15px 20px;
+  }
+
+  .header-left .logo {
+    font-size: 24px;
+  }
+
+  .header-nav ul {
+    margin-left: 200px;
+  }
+
+  .header-nav ul li {
+    margin-right: 25px;
+  }
+
+  .header-nav ul li a {
+    font-size: 15px;
+  }
+
+  .search-bar input {
+    width: 100px;
+  }
+
+  .user-icon,
+  .cart-icon {
+    font-size: 13px;
+    margin-left: 15px;
+  }
+
+  .user-icon i,
+  .cart-icon i {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px;
+  }
+
+  .header-nav ul {
+    flex-direction: column;
+    margin-top: 15px;
+    margin-left: 0;
+  }
+
+  .header-nav li {
+    margin: 10px 0;
+  }
+
+  .header-right {
+    margin-top: 15px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-bar {
+    width: 100%;
+    justify-content: center;
+    margin-right: 0;
+  }
+
+  .user-icon,
+  .cart-icon {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-left .logo {
+    font-size: 20px;
+  }
+
+  .header-nav ul li a {
+    font-size: 14px;
+  }
+
+  .search-bar input {
+    width: 80px;
+  }
 }
