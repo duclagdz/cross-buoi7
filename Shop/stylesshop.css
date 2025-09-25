@@ -97,7 +97,7 @@ section{
 }
 .sidebar{
     padding-top: 60px;
-    padding-left: 30px;
+    padding-left: 20px;
     position: fixed;
 }
 .Container{
@@ -130,9 +130,21 @@ section{
 .sidebar li a{
     text-decoration: none;
     color: #111;
+    
 }
 .sidebar li{
+    padding-top: 8px ;
     padding-bottom: 8px ;
+    padding-left: 10px;
+    width: 180px;
+}
+.sidebar li:hover, .sidebar a:hover{
+    color: #ccc;
+    background-color: #111;
+}
+.x1 li, .x1 li a {
+    background-color: #111;
+    color: #ff9800;
 }
 /* End Sidebar */
 /* Container */
@@ -150,10 +162,18 @@ section{
     display: flex;
     gap: 10px;
 }
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+a:hover{
+    color: #ff9800;
+}
 /* End Container */
 /* Name : All-Products*/
 .Sort{
     padding-bottom: 10px;
+    margin-left: 20px;
 }
 .Sort p{
     padding-bottom:5px ;
@@ -167,6 +187,9 @@ section{
 }
 .Container hr{
     margin-top: 20px;
+}
+select option {
+    background-color: black;
 }
 /* End Name */
 /* Product */
@@ -189,7 +212,7 @@ section{
     text-align: center;
 }
 .More_productx img{
-    width: 200px;
+    width: 150px;
     height: 200px;
 }
 .More_productx h3{
@@ -215,6 +238,27 @@ section{
     padding-right: 40px;
     padding-bottom: 20px;
     padding-top: 100px;
+}
+.img-box {
+    position: relative;
+    display: inline-block;
+}
+.img-box img {
+    display: block;
+    width: 100%;
+}
+.badge {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    background: #c6e200; /* màu xanh vàng */
+    color: black;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 2px 6px;
+    width: 50px;
+    height: 20px;
+    
 }
 /* End Product */
 /* Footer */

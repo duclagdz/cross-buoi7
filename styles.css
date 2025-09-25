@@ -280,7 +280,7 @@ hr{
 
 /* End Offers */
 /* New Arrivals */
-.NEW-ARRIVALS{  
+#NEW-ARRIVALS{  
     background-color: #1b1818;
     color: white;
     display: flex;
@@ -299,7 +299,7 @@ hr{
     height: 600px;
     width: 100%;
 }
-.NEW-ARRIVALS h2{
+#NEW-ARRIVALS h2{
     width: 500px;
     margin: 0 auto; 
 }
