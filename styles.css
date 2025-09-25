@@ -268,6 +268,10 @@ hr{
     opacity: 0;                /* Mặc định ẩn */
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
+a{
+    text-decoration: none;
+    color: #fff;
+}
 /* Hiện chữ khi hover vào khối */
 .offer1:hover .text-overlay, .offer2:hover .text-overlay, .offer3:hover .text-overlay {
     opacity: 1;
