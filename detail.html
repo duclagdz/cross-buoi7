@@ -63,7 +63,13 @@
         </div>
         <div class="product-details">
           <div class="product-navigation">
-            <a href="#">< Prev</a> | <a href="#">Next ></a>
+            <a href="#" style="text-decoration: none; color: white"
+              >&lt; Prev</a
+            >
+            |
+            <a href="#" style="text-decoration: none; color: white"
+              >Next &gt;</a
+            >
           </div>
           <h1>SERUM</h1>
           <div class="rating">
@@ -74,22 +80,13 @@
           <p class="sku">SKU: 0004</p>
           <p class="price">$75.00</p>
           <p class="description">
-            I'm a product description. This is a great place to "sell" your
-            product and grab buyers' attention. Describe your product
-            <a href="#">Read more</a>
+            A 4-week intensive Narcis Peptide™ formulated ampoule treatment for
+            a radiant complexion
           </p>
 
           <div class="options">
-            <div class="color-option">
-              <label for="color">Color: Black*</label>
-              <select id="color">
-                <option value="black">Black</option>
-                <option value="blue">Blue</option>
-                <option value="green">Green</option>
-              </select>
-            </div>
             <div class="quantity-option">
-              <label for="quantity">Quantity*</label>
+              <label for="quantity">Quantity</label>
               <div class="quantity-selector">
                 <button>-</button>
                 <input type="number" id="quantity" value="1" min="1" />
@@ -326,7 +323,13 @@
             class="product-navigation"
             style="text-align: center; margin-top: 20px"
           >
-            <a href="#">< Prev</a> | <a href="#">Next ></a>
+            <a href="#" style="text-decoration: none; color: white"
+              >&lt; Prev</a
+            >
+            |
+            <a href="#" style="text-decoration: none; color: white"
+              >Next &gt;</a
+            >
           </div>
         </div>
       </section>
@@ -441,6 +444,29 @@
               }
             });
           });
+        });
+      });
+
+      // Xử lý tăng giảm số lượng
+      document.addEventListener("DOMContentLoaded", function () {
+        const minusBtn = document.querySelector(
+          ".quantity-selector button:first-child"
+        );
+        const plusBtn = document.querySelector(
+          ".quantity-selector button:last-child"
+        );
+        const quantityInput = document.getElementById("quantity");
+
+        minusBtn.addEventListener("click", function () {
+          let value = parseInt(quantityInput.value, 10);
+          if (value > 1) {
+            quantityInput.value = value - 1;
+          }
+        });
+
+        plusBtn.addEventListener("click", function () {
+          let value = parseInt(quantityInput.value, 10);
+          quantityInput.value = value + 1;
         });
       });
     </script>
