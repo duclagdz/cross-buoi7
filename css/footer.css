@@ -62,3 +62,15 @@
   color: #ff9800;
   font-weight: bold;
 }
+
+@media (max-width: 768px) {
+  .footer-menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-menu li {
+    margin: 5px 0;
+    display: block;
+  }
+}
