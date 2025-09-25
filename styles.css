@@ -1,0 +1,476 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html {
+  scroll-behavior: smooth; /* Tạo hiệu ứng cuộn mượt */
+}
+/* Header */
+header{
+    height: 60px;
+    background-color: #1b1818;
+    opacity: 70%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+.menu-icon2, .Log-in-Menu a, .Cart-Menu a{
+    display: flex;
+}
+header ul{
+    list-style: none;
+    display: flex;
+
+}
+header ul li, .Log-in-Menu, .Cart-Menu, .search-form{
+    padding: 20px;
+}   
+header ul li a, .Log-in-Menu a, .Cart-Menu a{
+    text-decoration: none;
+    color: white;
+}
+
+header .menu-icon1 img{
+    width: 150px;
+    height: 90px;
+    padding-top: 10px;
+    padding-left: 40px;
+}
+.Log-in-Menu p, .Cart-Menu p{
+    padding-left: 10px;
+}
+.Log-in-Menu {
+    width: 80px;
+}
+.Cart-Menu{
+    width: 50px;
+}
+.search-form input{
+    border: none;
+    border-bottom: #ffffff 2px solid;
+    background-color: #1b1818;
+    height: 25px;
+    text-align: center;
+    color: whitesmoke;
+}
+header ul li a:hover, .Log-in-Menu a:hover, .Cart-Menu a:hover{
+    color: #ff9800;
+    font-weight: bold;
+    transform: scale(1.05);
+    transition: transform 0.3s;
+} 
+.search-form input:hover{
+    border-color: #ff9800;
+    font-weight: bold;
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+.menu-icon2 {
+    position: relative; /* Đặt vị trí tương đối để chứa dropdown */
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* ngay dưới mục cha */
+    background-color: rgba(0,0,0,0.8);
+    width: 200px;
+    z-index: 10;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content li a:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+/* End Header */
+/* Banner */
+#banner{
+    width: 100%;
+    height: 700px;
+    background-image: url(image/banner-1.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center; 
+    color: rgb(255, 255, 255);
+}
+.bannerx1{
+    padding-top: 300px;
+}
+#banner h1{
+    font-size: 60px;
+    width: 800px;
+    margin: 0 auto; 
+    animation: textColor 2s infinite alternate;
+}
+@keyframes textColor {
+    from {
+        color: white;   
+        background-color: #6b6b6b;           
+    }
+    to {
+        color: black;        
+    }
+}
+button {
+    background-color: transparent;
+    border: #ffffff 1px solid;
+    font-size: 20px;
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 30px;  
+    color: white;
+    animation: mix 2s infinite;
+}
+@keyframes mix {
+    from {
+        background-color: transparent;
+        color: #ffffff;
+    }
+    to {
+        background-color: white;
+        color: #000000;
+    }
+}
+.bannerx2 button{
+    color: #000000;
+    border: 2px solid #ffffff;
+    margin: 100px ;
+    width: 50px;
+    border-radius: 50%;
+    animation: bounce 2s infinite;
+}
+button:hover{
+    background-color: #ffffff;
+    color: #222222;
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+.bannerx2 a{
+    text-decoration: none;
+    color: white;
+}
+
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+        border: 2px solid #ffffff;
+        background-color: white;
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+/* End Banner */
+/* Best Sellers */
+#BEST-SELLERS{
+    text-align: center;
+    background-color: #1b1818;
+    color: white;
+    padding-top: 80px;
+}
+.product-grid{
+    display: flex;
+    flex-wrap: wrap; /* tự động xuống dòng*/
+    justify-content: center;
+    gap: 80px;
+    padding: 100px 50px;
+    
+}
+.product-item img{
+    width: 300px;
+    height: 300px;
+}
+h2{
+    display: block;
+    font-size: 50px;
+    margin: 20px 0 10px 0;
+    padding-bottom: 10px;
+}
+#BEST-SELLERS h2{
+    width: 500px;
+    margin: 0 auto; 
+}
+.product-item h3{
+    font-size: 20px;
+    margin: 15px 0 5px 0;
+}
+hr{
+    width: 50px;
+    margin-left: 125px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 2px solid #ffffff;
+}
+.product-item:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+.product-item h3:hover, .product-item p:hover{
+    color: #ff9800;
+    font-weight: bold;
+}
+/* End Best Sellers */
+/* Offers */
+.ThreeOffers{
+    background-color: #222222;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+.offer1{
+    height: 600px;
+    width: 34%;
+    background-image: url(image/cream-3.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center; 
+    position: relative; 
+}
+.offer2{
+    height: 600px;
+    width: 34%;
+    background-image: url(image/serum-3.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center; 
+    position: relative; 
+}
+.offer3{
+    height: 600px;
+    width: 34%;
+    background-image: url(image/category-tonner.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center; 
+    position: relative; 
+}
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;                /* Mặc định ẩn */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+/* Hiện chữ khi hover vào khối */
+.offer1:hover .text-overlay, .offer2:hover .text-overlay, .offer3:hover .text-overlay {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1); 
+    z-index: 100;
+}
+.offer1:hover, .offer2:hover, .offer3:hover {
+    filter: brightness(80%);
+}
+
+/* End Offers */
+/* New Arrivals */
+.NEW-ARRIVALS{  
+    background-color: #1b1818;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.Side-New-Arrivals1{
+    text-align: center;
+    padding-top: 200px;
+    width: 100%;
+}
+.Side-New-Arrivals{
+    background-image: url(image/new-arrivals.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center; 
+    height: 600px;
+    width: 100%;
+}
+.NEW-ARRIVALS h2{
+    width: 500px;
+    margin: 0 auto; 
+}
+/*End New Arrivals */
+/* About Us */
+#ABOUT-US{
+    background-image: url(image/about.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    filter: brightness(90%);
+}
+.Side-About-Us1{
+    width: 100%;
+    padding-top: 200px;
+}
+.Side-About-Us{
+    height: 600px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    opacity: 30%;
+}
+.Side-About-Us1 h2, .Side-About-Us1 p{
+    width: 420px;
+    margin: 0 auto; 
+    padding-left: 40px;
+    padding-right: 40px;
+    color: black;
+}
+/* End About Us */
+/* Contact */
+#CONTACT{
+    background-color: #1b1818;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    height: 610px;
+}   
+.Side-Contact1{
+    width: 100%;
+    text-align: right;
+    padding-right: 50px;
+    padding-top: 70px;
+    padding-left: 30px;
+}
+.Side-Contact{
+    width: 100%;
+    padding-left: 50px;
+    padding-top: 40px;
+}
+.Side-Contact h2, .Side-Contact p{
+    width: 420px; 
+}
+.part-contact-form, .partx-contact-form, .partxx-contact-form{
+    width: 420px;
+    margin-left: auto;
+    text-align: left;
+}
+.partxx-contact-form{
+    display: flex;
+    gap: 15px;
+}
+.part-contact-form input{
+    width: 390px;
+    height: 30px;
+    background-color: transparent;
+    border: oldlace 2px solid;
+    margin: 10px 0;
+    color: white;
+    padding: 0 5px;
+}
+.part-contact-form textarea{
+    width: 390px;
+    height: 100px;
+    background-color: transparent;
+    border: oldlace 2px solid;
+    margin: 10px 0 0 0;
+    color: white;
+    padding: 0 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.partxx-contact-form input{
+    width: 180px;
+    height: 30px;
+    background-color: transparent;
+    border: oldlace 2px solid;
+    margin: 10px 0;
+    color: white;
+    padding: 0 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.partx-contact-form button{
+    height: 40px;
+    width: 180px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+label, p{
+    font-size: 18px;
+    font-weight: 10; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+.partx-contact-form {
+    text-align: right;
+    padding-right: 30px;
+    height: 50px;
+}
+.partx-contact-form button{
+    animation: none 0s;
+}
+/* End Contact */
+/* Footer */
+footer {
+    background-color: #111;
+    padding: 30px 20px;
+    text-align: center;
+    }
+.social-icons {
+    margin-bottom: 20px;
+}
+.social-icons a {
+    display: inline-flex;
+    align-items: center; /* dọc */
+    justify-content: center; /* ngang */
+    width: 40px;
+    height: 40px;
+    margin: 0 8px;
+    background-color: #fff;
+    color: #111;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    animation: xxx 1.5s infinite alternate;
+}
+@keyframes xxx {
+    from {
+        transform: translateY(-9px);
+    }
+    to {
+        transform: translateY(3px);
+    }
+}
+.social-icons a:hover {
+    transform: translateY(-3px);
+    background-color: #ff9800;
+    color: #fff;
+}
+.footer-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* tự động xuống dòng*/
+    gap: 20px;
+}
+.footer-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+.footer-menu a:hover {
+    color: #ff9800;
+}
+.copyright {
+    font-size: 18px;
+    color: #ccc;
+    margin-top: 15px;
+}
+.copyright span {
+    color: #ff9800;
+    font-weight: bold;
+}
+/* End footer */
+

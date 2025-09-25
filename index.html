@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
+    <link rel="stylesheet" href="styles.css" href="reponsive.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        
+    />
+    <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+</head>
+<style>
+</style>
+<body>
+    <header>
+        <div class="menu-icon1">
+            <a href="#banner">
+                <img src="image/logo1.png" alt="Logo" />
+            </a>
+            
+        </div>
+        <div class="menu-icon2">
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="Shop/allproduct.html">SHOP</a>
+                        <ul class="dropdown-content">
+                            <li><a href="#">BACKPACKS</a></li>
+                            <li><a href="#">DUFFLE BAGS</a></li>
+                            <li><a href="#">TRAVEL PACKS</a></li>
+                            <li><a href="#">GIFT CARD</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#ABOUT-US">ABOUT</a></li>
+                    <li><a href="#BEST-SELLERS">HOT</a></li>
+                    <li><a href="#CONTACT">CONTACT</a></li>
+                </ul>
+            </nav>
+            <form action="#" method="get" class="search-form">
+                <input type="text" class="search-input" placeholder="Tìm kiếm..." />
+            </form>
+            <div class="Log-in-Menu">
+                <a href="/Signin/Signin.html">
+                    <i class="fa-solid fa-user"></i>
+                    <p>Log In</p>
+                </a>
+            </div>
+            <div class="Cart-Menu">
+                <a href="#">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <p>0</p>
+                </a>
+            </div>
+        </div>
+    </header>
+    <section id="banner">
+        <div class="bannerx1"></div>
+            <h1> PLAN YOUR ADVENTURE </h1>
+            <button class="shop-now-button">SHOP NOW</button>
+        </div>
+        </div>
+        <div class="bannerx2">
+            <button>
+                <a href="#BEST-SELLERS">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+            </button>
+        </div>
+    </section>
+    <section id="BEST-SELLERS">
+        <h2>BEST SELLERS</h2>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="image/category-cream.jpg" alt="Product 1" />
+                <h3>Product 121212</h3>
+                <hr />
+                <p>$100</p>
+            </div>
+            <div class="product-item">
+                <img src="image/category-serum.jpg" alt="Product 2" />
+                <h3>Product 21211221</h3>
+                <hr />
+                <p>$150</p>
+            </div>
+            <div class="product-item">
+                <img src="image/toner-1.jpg" alt="Product 3" />
+                <h3>Product 31212</h3>
+                <hr />
+                <p>$200</p>
+            </div>
+        </div>
+    </section>
+    <section class="ThreeOffers">
+        <div class="offer1">
+            <div class="text-overlay">DUFFLE BAGS</div>
+        </div>
+        <div class="offer2">
+            <div class="text-overlay">BACKPACKS</div>
+        </div>
+        <div class="offer3">
+            <div class="text-overlay">ACCESSORIES</div>
+        </div>
+    </section>
+    <section class="NEW-ARRIVALS">
+        <div class="Side-New-Arrivals1">
+            <h2> NEW ARRIVALS </h2>
+            <button class="shop-now-button">SHOP NOW</button>
+        </div>
+        <div class="Side-New-Arrivals"></div>
+    </section>
+    <section id="ABOUT-US">
+        <div class="Side-About-Us1">
+            <h2>ABOUT US</h2>
+            <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you</p>
+        </div>
+        <div class="Side-About-Us"></div>
+    </section>
+    <section id="CONTACT">
+        <div class="Side-Contact1">
+            <form action="#" method="post" class="contact-form">
+                <div class="partxx-contact-form">
+                    <div class="name-fields1">
+                        <label for="Firstname">First Name</label></br>
+                        <input type="text" name="Firstname" required />
+                    </div>
+                    <div class="name-fields">
+                        <label for="Lastname">Last Name</label></br>
+                        <input type="text" name="Lastname" required />
+                    </div>
+                </div>
+                <div class="part-contact-form">
+                    <label for="email">Email</label></br>
+                    <input type="email" name="email" required />
+                </div>
+                <div class="part-contact-form">
+                    <label for="subject">Subject</label></br>
+                    <input type="text" name="subject" required />
+                </div>
+                <div class="part-contact-form">
+                    <label for="message">Message</label></br>
+                    <textarea name="message" required></textarea>
+                </div>
+                <div class="partx-contact-form">
+                    <button type="submit">Send</button>
+                </div>
+            </form>
+        </div>
+        <div class="Side-Contact">
+            <h2>CONTACT</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque aliquam odio et faucibus.</p> 
+            <br/>
+            <p>info@example.com</p>
+            <p>Tel: 123-456-7890</p>
+        </div>
+    </section>
+    <footer>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <ul class="footer-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Our Team</a></li>
+        </ul>
+        <p class="copyright">
+        Copyright ©2022; Designed by <span>FAHEEM</span>
+        </p>
+    </footer>
+</body>
+</html>
