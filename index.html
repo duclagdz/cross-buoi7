@@ -13,6 +13,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <script src="./js/slider.js" defer></script>
   </head>
   <body>
     <header class="main-header">
@@ -51,18 +52,37 @@
     </header>
 
     <section id="banner" class="banner">
-      <img
-        src="./images/banner.jpg"
-        alt="Plan Your Adventure"
-        class="banner-image"
-      />
-      <div class="banner-content">
-        <h1>UNLOCK YOUR RADIANCE</h1>
-        <a href="shop.html"
-          ><button class="shop-now-button">SHOP NOW</button></a
-        >
-        <div class="scroll-down-arrow">
-          <i class="fas fa-chevron-down"></i>
+      <div class="slider-container">
+        <div class="slider-images">
+          <img
+            src="./images/banner.jpg"
+            alt="Banner 1"
+            class="slider-image active"
+          />
+          <img src="./images/banner1.jpg" alt="Banner 2" class="slider-image" />
+          <img src="./images/banner2.jpg" alt="Banner 3" class="slider-image" />
+          <img src="./images/banner3.jpg" alt="Banner 4" class="slider-image" />
+          <img src="./images/banner4.jpg" alt="Banner 5" class="slider-image" />
+          <img src="./images/banner5.jpg" alt="Banner 6" class="slider-image" />
+          <img src="./images/banner6.jpg" alt="Banner 7" class="slider-image" />
+        </div>
+        <div class="banner-content">
+          <h1>UNLOCK YOUR RADIANCE</h1>
+          <a href="shop.html"
+            ><button class="shop-now-button">SHOP NOW</button></a
+          >
+          <div class="scroll-down-arrow">
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </div>
+        <div class="slider-dots">
+          <span class="dot active" data-slide="0"></span>
+          <span class="dot" data-slide="1"></span>
+          <span class="dot" data-slide="2"></span>
+          <span class="dot" data-slide="3"></span>
+          <span class="dot" data-slide="4"></span>
+          <span class="dot" data-slide="5"></span>
+          <span class="dot" data-slide="6"></span>
         </div>
       </div>
     </section>
