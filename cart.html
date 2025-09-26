@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="icon" href="./images/logo.jpg" type="image/jpg" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #000; /* Dark background */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        color: #fff;
+      }
+
+      .cart-box {
+        background: #1a1a1a;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+        width: 380px;
+      }
+
+      .cart-box h2 {
+        margin: 0 0 20px;
+        font-size: 22px;
+        text-align: center;
+        color: #fff;
+      }
+
+      .cart-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #333;
+      }
+
+      .cart-item img {
+        max-width: 80px; /* Giới hạn tối đa */
+        max-height: 80px; /* Không ép ảnh vượt quá kích thước */
+        border-radius: 10px;
+        object-fit: contain; /* Giữ nguyên, không bị vỡ */
+        flex-shrink: 0;
+      }
+
+      .item-info {
+        flex: 1;
+        margin-left: 15px;
+      }
+
+      .item-info h4 {
+        margin: 0;
+        font-size: 16px;
+        color: #fff;
+      }
+
+      .item-info p {
+        margin: 3px 0 0;
+        font-size: 13px;
+        color: #aaa;
+      }
+
+      .item-price {
+        font-size: 15px;
+        font-weight: bold;
+        color: #fff;
+        margin-left: 10px;
+        white-space: nowrap;
+      }
+
+      .cart-total {
+        text-align: right;
+        margin-top: 20px;
+        font-size: 17px;
+        font-weight: bold;
+        color: #fff;
+      }
+
+      .cart-btn {
+        width: 100%;
+        padding: 12px;
+        margin-top: 15px;
+        border: none;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 6px;
+        cursor: pointer;
+        background-color: #fff;
+        color: #000;
+        transition: 0.3s;
+      }
+
+      .cart-btn:hover {
+        background-color: #ccc;
+      }
+
+      .back-link {
+        display: inline-block;
+        margin-bottom: 15px;
+        font-size: 14px;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .back-link:hover {
+        text-decoration: underline;
+      }
+
+      /* Responsive */
+      @media (max-width: 480px) {
+        .cart-box {
+          width: 90%;
+          padding: 20px;
+        }
+
+        .cart-item img {
+          max-width: 60px;
+          max-height: 60px;
+        }
+
+        .item-info h4 {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cart-box">
+      <a class="back-link" href="index.html">← Back</a>
+      <h2>Your Cart</h2>
+
+      <div class="cart-item">
+        <img src="images/serum-2.jpg" alt="Serum" />
+        <div class="item-info">
+          <h4>Serum</h4>
+          <p>Quantity: 1</p>
+        </div>
+        <div class="item-price">$110</div>
+      </div>
+
+      <div class="cart-item">
+        <img src="images/cream-1.jpg" alt="Cream" />
+        <div class="item-info">
+          <h4>Cream</h4>
+          <p>Quantity: 2</p>
+        </div>
+        <div class="item-price">$135</div>
+      </div>
+
+      <div class="cart-total">Total: $355</div>
+
+      <button class="cart-btn">Checkout</button>
+    </div>
+  </body>
+</html>
